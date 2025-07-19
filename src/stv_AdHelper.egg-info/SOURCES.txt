@@ -1,0 +1,13 @@
+pyproject.toml
+readme.md
+./readme.md
+src/stv_AdHelper/main.py
+src/stv_AdHelper.egg-info/PKG-INFO
+src/stv_AdHelper.egg-info/SOURCES.txt
+src/stv_AdHelper.egg-info/dependency_links.txt
+src/stv_AdHelper.egg-info/entry_points.txt
+src/stv_AdHelper.egg-info/requires.txt
+src/stv_AdHelper.egg-info/top_level.txt
+src/stv_AdHelper/core/window.py
+src/stv_AdHelper/core/worker.py
+src/stv_AdHelper/utils/utils.py
