@@ -1,2 +1,0 @@
-[console_scripts]
-pad = stv_AdHelper.main:main
