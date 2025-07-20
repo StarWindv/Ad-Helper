@@ -1,16 +1,25 @@
 # 🎮 自动公屏广告助手
 
+[English](./readme.md)
+
 > 一款专为游戏玩家设计的自动化工具，帮助您在游戏公屏中定时发送广告信息（如公会招人、物品交易等）
 
 ## 🌟 功能特点
 
 - **精准坐标控制**：通过可视化界面设置游戏内文本框和发送按钮的精确坐标
+  
 - **内容自定义**：自由编辑要发送的广告内容（支持中英文及特殊符号）
+  
 - **智能定时**：自定义发送间隔（0.1秒至1小时）和发送次数（支持无限循环）
+  
 - **操作反馈**：提供操作提示音和实时日志记录
+  
 - **深色主题**：现代化深色界面设计，减少长时间使用眼睛疲劳
+  
 - **配置保存**：自动保存所有设置，下次启动无需重新配置
-- **安全可靠**：纯Python开发，不修改游戏内存，仅模拟鼠标键盘操作
+  
+- **安全可靠**：纯Python开发，不修改游戏内存，仅模拟鼠标键盘操作，非外挂
+  
 
 ## 📦 项目结构
 
@@ -24,6 +33,7 @@
         ├── core
         │   ├── window.py
         │   └── worker.py
+        ├── main-ui.py
         ├── main.py
         └── utils
             └── utils.py
@@ -35,13 +45,13 @@
 
 1. 点击"获取坐标"按钮
 2. 5秒倒计时内将鼠标移动到游戏内：
-   - **A点**：聊天输入框位置
-   - **B点**：发送按钮位置
+  - **A点**：聊天输入框位置
+  - **B点**：发送按钮位置
 3. 程序自动捕获并保存坐标
 
 ### 2. 编辑内容
 
-在"内容设置"区域输入要在公屏发送的广告文本
+在"内容设置"区域输入要在公屏发送的广告文本，您可以使用#n来代表换行符
 
 ### 3. 配置参数
 
@@ -56,37 +66,41 @@
 ## 🛠 运行环境
 
 - **操作系统**：Windows 10/11, macOS, Linux
-
+  
 - **Python版本**：3.10+
-
+  
 - **依赖库**：
   
   ```bash
-  PyQt5
-  pyautogui
-  pyperclip
+  pip install PyQt5 pyautogui pyperclip stv_utils
   ```
+  
 
 ## 🚀 安装与运行
 
 1. 克隆仓库：
-   
-   ```bash
-   git clone https://github.com/yourusername/stv_AdHelper.git
-   cd stv_AdHelper
-   ```
-
+  
+  ```bash
+  git clone https://github.com/yourusername/stv_AdHelper.git
+  cd stv_AdHelper
+  ```
+  
 2. 安装程序：
-   
-   ```bash
-   pip install .
-   ```
-
+  
+  ```bash
+  pip install .
+  ```
+  
 3. 运行程序：
-   
-   ```bash
-   pad
-   ```
+  
+  `sadui` 是本工具的gui模式，如果您更喜欢cli模式，也可以运行 `sad`.
+  
+  `sad` 即为 `send Ad`.
+  
+
+```bash
+sadui
+```
 
 ## ⚠️ 注意事项
 
@@ -98,4 +112,8 @@
 
 ## 📜 开源协议
 
-本项目采用 [GPL v3 License](./LICENSE) 开源协议
+本项目采用 [GPL v3 License](https://github.com/StarWindv/Ad-Helper/blob/main/LICENSE) 开源协议
+
+## 📕 欢迎贡献
+
+欢迎各路大能做出贡献, 做出更好的自动化助手
