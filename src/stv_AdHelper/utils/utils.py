@@ -1,6 +1,6 @@
+import json
 import os
 import platform
-import json
 from pathlib import Path
 
 
@@ -10,7 +10,8 @@ def get_config_path():
     config_path = home_dir / ".AutoAd_config.json"
     return config_path
 
-def save_config(config):
+
+def save_config(config, cli: bool = False):
     """保存配置到文件"""
     config_path = get_config_path()
     try:
@@ -21,10 +22,13 @@ def save_config(config):
 
         with open(config_path, 'w') as f:
             json.dump(saveable_config, f, indent=4)
+        if cli:
+            print(f"✓ 配置已保存至: {config_path}")
         return True
     except Exception as e:
         print(f"保存配置失败: {e}")
         return False
+
 
 def load_config():
     """从文件加载配置"""
@@ -46,7 +50,7 @@ def load_config():
         print(f"加载配置失败: {e}")
         return {}
 
-# ---------------------- 工具函数 ----------------------
+
 def play_sound(frequency=500, duration=300):
     """跨平台提示音"""
     try:
